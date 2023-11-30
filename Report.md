@@ -577,13 +577,27 @@ set_property IOSTANDARD LVCMOS33 [get_ports mode]
 set_property PACKAGE_PIN R2 [get_ports mode]
 ```
 
+## Post Implementation Schematic
+
+## Power Utilisation
+
+## Resource Utilisation
+
+## Timing Report
+
+## Critical Path
+
+## Floorplan
+
+## 
+
 ## Image Output Explanation
 
 The Verilog module vga_syncIndex orchestrates a complex yet versatile image display on a VGA monitor, creating a visually captivating experience for the viewer.
 This implementation employs a block RAM module (image module) to store and retrieve pixel data, contributing to the dynamic nature of the displayed images. The VGA screen is 
 intelligently divided into four distinct corners, each corner offering a unique visual presentation based on the selected mode. 
 
-Starting with the top-left corner, the module presents  edge detection version of the image. Upon changing the mode to 1, the corner seamlessly transitions to showcasing the original 
+Starting with the top-left corner, the module presents edge detection version of the image. Upon changing the mode to 1, the corner seamlessly transitions to showcasing the original 
 pixel image, providing viewers with the option to appreciate both the artistic and technical aspects of the image. 
 Moving to the top-right corner, the visual experience takes an artistic turn. In mode 0, the image is displayed with a blue color filter applied, creating a distinct and visually 
 appealing effect. Switching to mode 1 restores the top-right corner to display the unaltered, original image, allowing users to toggle between artistic interpretations and 
@@ -595,6 +609,41 @@ the original, unfiltered image, providing a balance between artistic interpretat
 
 Throughout this visual journey, the continuous retrieval and display of pixel data from the block RAM contribute to the fluidity of the image presentation. The module not only 
 demonstrates technical proficiency in interfacing with VGA signals but also offers a creative platform for experimenting with various image processing effects. Users can 
-explore diverse visual interpretations at each corner of the VGA display, making this module a powerful tool for both technical and artistic exploration
+explore diverse visual interpretations at each corner of the VGA display, making this module a powerful tool for both technical and artistic exploration.
 
+# Output Images
+
+
+# Simulation Output Video
+
+
+
+# Result Comparision Table 
+
+| Parameters                    | Serial Bit Multiplier | Parallel Bit Multiplier  |
+|------------------------------ |-----------------------|--------------------------|
+| Total On Chip Power (mW)      | 130                   | 76                       |
+| Worst Negative Slack (ns)     | 8.855                 | 6.74                     |
+| Worst Negative Hold Slack (ps)| 97                    | 1051                     |
+| LUTs                          | 1969                  | 222                      |
+| LEAF CELL                     | 950                   | 206                      |
+
+![comparision_chart_fpga](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/2edf7115-291d-4493-ab78-14936a700c9f)
+
+
+
+# Acknowledgement
+
+* Dr. Nanditha Rao, Course Professor
+* Jay Shah, TA for Project
+* Akhil Asati-, Partner for this Project
+
+# References
+
+* https://www.researchgate.net/profile/Sivanantham-S/publication/286921324_Image_edge_detection_in_FPGA/links/566fa69b08ae486986b71137/Image-edge-detection-in-FPGA.pdf?origin=publication_detail&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uRG93bmxvYWQiLCJwcmV2aW91c1BhZ2UiOiJwdWJsaWNhdGlvbiJ9fQ
+* https://stackoverflow.com/questions/
+* https://github.com/Shubhayu-Das/VL504-project#video-over-vga-using-the-ov7670
+* https://embeddedthoughts.com/2016/07/29/driving-a-vga-monitor-using-an-fpga/
+* https://github.com/FPGADude/Digital-Design/tree/main/FPGA%20Projects/VGA%20Projects/VGA%20Bouncing%20Square
+  
 
