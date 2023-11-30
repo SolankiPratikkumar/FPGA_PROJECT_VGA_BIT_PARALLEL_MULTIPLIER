@@ -2,6 +2,7 @@
 
 (a.) As a first step, read images stored in a Block RAM into a buffer, and display it on a VGA monitor at different corners of the VGA after a certain delay. You should be able 
 to find the VGA interfacing code. 
+
 (b.) Apply image transformation techniques (these techniques can use the bit serial multiplier and bit parallel multiplier) to the captured image, display it on VGA
 
 # INTRODUCTION
@@ -14,8 +15,8 @@ crucial for VGA signals, supporting resolutions like 640x480, 800x600, and 1024x
 
 ![Picture1](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/6e16ce2b-cb08-454f-ba92-183d519f38f2)
 
-## Generating VGA Signals - Microcontroller/FPGA:
-Microcontrollers or FPGAs are responsible for VGA signal generation. Hardware description languages like Verilog or VHDL describe the logic for VGA signal generation. 
+## Generating VGA Signals in FPGA:
+FPGAs are responsible for VGA signal generation. Hardware description languages like Verilog or VHDL describe the logic for VGA signal generation. 
 Digital-to-analog converters (DACs) often convert RGB values from digital to analog.
 * Synchronization Signal Generation:
 Horizontal and vertical synchronization signals (HSync and VSync) mark the beginning of each line and frame, ensuring proper timing to prevent visual artifacts.
@@ -132,7 +133,6 @@ image inst1(
  assign horizontal_syncon = ec & (horizontal_counter == 721);
  assign horizontal_syncoff = ec & (horizontal_counter == 751);
  assign hreset = ec & (horizontal_counter == 799);
- 
  wire blank = (vblank | (hblank & ~hreset)); 
  
  wire vsyncon,vsyncoff,vreset,vblankon;
@@ -422,9 +422,9 @@ end
 
 ```
 
-## PARALLEL BIT MULTIPLIER VERILOG CODE
+# PARALLEL BIT MULTIPLIER VERILOG CODE
 
-* Submodule1: Edge Detection at Threshold=200
+## Submodule1: Edge Detection at Threshold=200
   
 ```
 module bit_parallel_multiplier( 
@@ -446,7 +446,7 @@ module bit_parallel_multiplier(
 endmodule
 ```
 
-*  Submodule2: Red Filter and Blue Filter Verilog Code
+##  Submodule2: Red Filter and Blue Filter Verilog Code
   
 ```
 module red_filter( 
@@ -506,8 +506,8 @@ create_clock -period 10.000 -name sys_clock_pin -waveform {0.000 5.000} -add [ge
 clock] 
 ## Switches 
 ## Switches 
-######################################################### sel_modules 
-####################################################### 
+## sel_modules 
+#####
 set_property PACKAGE_PIN V17 [get_ports reset] 
 set_property IOSTANDARD LVCMOS33 [get_ports reset] 
 #set_property PACKAGE_PIN V15 [get_ports {B[1]}] 
@@ -589,7 +589,6 @@ set_property PACKAGE_PIN R2 [get_ports mode]
 
 ## Floorplan
 
-## 
 
 ## Image Output Explanation
 
@@ -611,22 +610,73 @@ Throughout this visual journey, the continuous retrieval and display of pixel da
 demonstrates technical proficiency in interfacing with VGA signals but also offers a creative platform for experimenting with various image processing effects. Users can 
 explore diverse visual interpretations at each corner of the VGA display, making this module a powerful tool for both technical and artistic exploration.
 
-# Output Images
 
+
+# Output Images By Bit Parallel Multiplication Techniques
+
+## Original Image on Bottom-Right Corner of Screen
+
+![right_bottom_original_imag](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/dce6f2f8-0814-4992-ba1f-7278cd2068d8)
+
+## Red Filtered Transition Image on Bottom-Right Corner of Screen
+
+![right_bottom_corner](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/5c2cbb27-d8a2-4d0d-a3da-ebafacafd3db)
+
+## Original Image on Top-Right Corner of Screen
+
+![right_top_original_tansistion image](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/4a32dd89-c484-4a22-8912-450877b2c9fe)
+
+## Blue Filtered Transition Image on Top-Right Corner of Screen
+
+![_right_top_image](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/d851f2ed-1fbb-4539-8c5b-35ee26cf12d6)
+
+## Displayed Original Image on Top-Left Corner of Screen
+
+![original_image](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/f68218e4-c5b1-4f5f-bec9-f861511df961)
+
+## Edge Detection Transition Image on Bottom-Left Corner of Screen
+
+![edge_detection_left_bottom](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/eb5f8efe-6be5-47ea-b584-4b9116089219)
+
+## Complete Final Output Image
+
+![complete_final_images](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/b40d916b-6ef9-44bd-a134-cad4350d19d4)
+
+ 
 
 # Simulation Output Video
 
+
+## Result of VGA Interfacing using Bit Serial Multiplication Technique 
+
+* Bit Serial Multiplier Power Report
+
+![serial_POWER](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/b700b2bb-4b1a-43c5-9fca-178479b1cba9)
+
+* Bit Serial Multiplier Schematics
+  
+![seria_schematics](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/e2ac98ba-c7cc-4024-b193-2459f2c58050)
+  
+* Bit Serial Multiplier Timing, Floorplan, Leaf Cells
+  
+![serial_Timing_LeAF_Floorplan](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/d6dcc838-301e-4e58-ba7a-b782e751c6bf)
+
+* Bit Serial Multiplier Resource Utilisation
+
+![SERIAL_LUTS](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/3b044f19-03e2-46a7-8d87-0067720ec241)
 
 
 # Result Comparision Table 
 
 | Parameters                    | Serial Bit Multiplier | Parallel Bit Multiplier  |
 |------------------------------ |-----------------------|--------------------------|
-| Total On Chip Power (mW)      | 130                   | 76                       |
+| Total On-Chip Power (mW)      | 130                   | 76                       |
 | Worst Negative Slack (ns)     | 8.855                 | 6.74                     |
 | Worst Negative Hold Slack (ps)| 97                    | 1051                     |
-| LUTs                          | 1969                  | 222                      |
-| LEAF CELL                     | 950                   | 206                      |
+| Number of LUTs used           | 1969                  | 222                      |
+| LEAF CELL used                | 950                   | 206                      |
+
+![original_image](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/7fa31642-74e2-4377-b1a4-0039bda2d8db)
 
 ![comparision_chart_fpga](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/2edf7115-291d-4493-ab78-14936a700c9f)
 
@@ -636,7 +686,8 @@ explore diverse visual interpretations at each corner of the VGA display, making
 
 * Dr. Nanditha Rao, Course Professor
 * Jay Shah, TA for Project
-* Akhil Asati-, Partner for this Project
+* Akhil Asati, Partner for this Project
+* Nancy and Shivangi, IIITB Colleagues provided Bit_Serial_Technique_Results
 
 # References
 
