@@ -676,7 +676,7 @@ explore diverse visual interpretations at each corner of the VGA display, making
 | Number of LUTs used           | 1969                  | 222                      |
 | LEAF CELL used                | 950                   | 206                      |
 
-![original_image](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/7fa31642-74e2-4377-b1a4-0039bda2d8db)
+
 
 ![comparision_chart_fpga](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/2edf7115-291d-4493-ab78-14936a700c9f)
 
