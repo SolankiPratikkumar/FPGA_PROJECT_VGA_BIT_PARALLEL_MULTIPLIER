@@ -687,7 +687,7 @@ explore diverse visual interpretations at each corner of the VGA display, making
 * Dr. Nanditha Rao, Course Professor
 * Jay Shah, TA for Project
 * Akhil Asati, Partner for this Project
-* Nancy and Shivangi, IIITB Colleagues provided Bit_Serial_Technique_Results
+* Nancy and Shivangi, IIITB Colleagues 
 
 # References
 
