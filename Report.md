@@ -652,11 +652,6 @@ appealing effect.
 
 ![complete_final_images](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/b40d916b-6ef9-44bd-a134-cad4350d19d4)
 
- 
-
-# Simulation Output Video
-
-
 ## Result of VGA Interfacing using Bit Serial Multiplication Technique 
 
 * Bit Serial Multiplier Power Report
