@@ -424,7 +424,7 @@ end
 
 # PARALLEL BIT MULTIPLIER VERILOG CODE
 
-## Submodule1: Edge Detection at Threshold=200
+## Submodule1: Edge Detection at Threshold=200- Gray Filter
   
 ```
 module bit_parallel_multiplier( 
@@ -579,38 +579,48 @@ set_property PACKAGE_PIN R2 [get_ports mode]
 
 ## Post Implementation Schematic
 
+![1](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/1f8cd2d8-4b2e-4e4e-98bc-ff884543af19)
+![2](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/cc423e92-d883-4039-920c-03fdfd3786aa)
+
 ## Power Utilisation
+
+![3](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/d35a4045-0791-4454-90f3-6b7a9d36c233)
 
 ## Resource Utilisation
 
+![4](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/16d92214-6a75-4bf6-b3dc-f9e4ff3b79dc)
+
 ## Timing Report
+
+![5](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/f2e9af16-206c-47bb-9923-afa62445c815)
+![6](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/aa4ad10f-48be-42a8-a863-83c5d5f3e45e)
+![7](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/3491a422-78f8-4df4-9e82-a0852c2a950a)
+![8](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/3217c00d-27c8-451b-8bc8-d0a1a18c4d38)
+![9](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/9cffbdf6-a936-4bf0-a93f-462135007119)
 
 ## Critical Path
 
+![10](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/5f220d76-129f-4152-89ae-ef5de6fb6d56)
+
 ## Floorplan
 
+![11](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/d8be8164-4d2f-4e63-ad21-38dcda778440)
 
 ## Image Output Explanation
 
-The Verilog module vga_syncIndex orchestrates a complex yet versatile image display on a VGA monitor, creating a visually captivating experience for the viewer.
-This implementation employs a block RAM module (image module) to store and retrieve pixel data, contributing to the dynamic nature of the displayed images. The VGA screen is 
-intelligently divided into four distinct corners, each corner offering a unique visual presentation based on the selected mode. 
-
-Starting with the top-left corner, the module presents edge detection version of the image. Upon changing the mode to 1, the corner seamlessly transitions to showcasing the original 
-pixel image, providing viewers with the option to appreciate both the artistic and technical aspects of the image. 
-Moving to the top-right corner, the visual experience takes an artistic turn. In mode 0, the image is displayed with a blue color filter applied, creating a distinct and visually 
-appealing effect. Switching to mode 1 restores the top-right corner to display the unaltered, original image, allowing users to toggle between artistic interpretations and 
-true representations. The bottom-left corner introduces an intriguing dynamic. In mode 0, viewers observe the unfiltered original image, while
-switching to mode 1 transforms the corner into edge detection rendition, adding a layer of sophistication to the visual presentation. 
-
-The bottom-right corner incorporates a red color filter in mode 0, infusing warmth and artistic expression into the image. Changing to mode 1 in this corner restores the display to 
-the original, unfiltered image, providing a balance between artistic interpretation and faithful representation. 
-
-Throughout this visual journey, the continuous retrieval and display of pixel data from the block RAM contribute to the fluidity of the image presentation. The module not only 
-demonstrates technical proficiency in interfacing with VGA signals but also offers a creative platform for experimenting with various image processing effects. Users can 
-explore diverse visual interpretations at each corner of the VGA display, making this module a powerful tool for both technical and artistic exploration.
-
-
+* The Verilog module vga_syncIndex orchestrates a complex yet versatile image display on a VGA monitor, creating a visually captivating experience for the viewer.
+* This implementation employs a block RAM module (image module) to store and retrieve pixel data, contributing to the dynamic nature of the displayed images.
+* The VGA screen is intelligently divided into four distinct corners, each corner offering a unique visual presentation based on the selected mode. 
+* Starting with the top-left corner, the module presents an edge-detection version of the image. Upon changing the mode to 1, the corner seamlessly transitions to showcasing the original pixel image, providing viewers with the option to appreciate both the artistic and technical aspects of the image. 
+* Moving to the top-right corner, the visual experience takes an artistic turn. In mode 0, the image is displayed with a blue color filter applied, creating a distinct and visually 
+appealing effect.
+* Switching to mode 1 restores the top-right corner to display the unaltered, original image, allowing users to toggle between artistic interpretations and true representations.
+* The bottom-left corner introduces an intriguing dynamic. In mode 0, viewers observe the unfiltered original image, while switching to mode 1 transforms the corner into edge detection rendition, adding a layer of sophistication to the visual presentation. 
+* The bottom-right corner incorporates a red color filter in mode 0, infusing warmth and artistic expression into the image.
+* Changing to mode 1 in this corner restores the display to the original, unfiltered image, providing a balance between artistic interpretation and faithful representation. 
+* Throughout this visual journey, the continuous retrieval and display of pixel data from the block RAM contribute to the fluidity of the image presentation.
+* The module not only demonstrates technical proficiency in interfacing with VGA signals but also offers a creative platform for experimenting with various image processing effects.
+* Users can explore diverse visual interpretations at each corner of the VGA display, making this module a powerful tool for both technical and artistic exploration.
 
 # Output Images By Bit Parallel Multiplication Techniques
 
@@ -664,6 +674,7 @@ explore diverse visual interpretations at each corner of the VGA display, making
 * Bit Serial Multiplier Resource Utilisation
 
 ![SERIAL_LUTS](https://github.com/SolankiPratikkumar/FPGA_PROJECT_VGA_BIT_PARALLEL_MULTIPLIER/assets/140999250/3b044f19-03e2-46a7-8d87-0067720ec241)
+
 
 
 # Result Comparision Table 
